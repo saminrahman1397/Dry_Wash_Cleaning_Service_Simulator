@@ -1,6 +1,6 @@
-package org.example.drywashcleaningservicesimulator.SaminRahman;
+package org.example.drywashcleaningservicesimulator;
 
-public abstract class User{
+public abstract class User {
     private String userID;
     private String userName;
     private String email;
