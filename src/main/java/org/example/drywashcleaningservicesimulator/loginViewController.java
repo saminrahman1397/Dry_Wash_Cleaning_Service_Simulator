@@ -18,9 +18,6 @@ public class loginViewController {
         userTypeComboBox.getItems().addAll("Customer","Front Desk Receptionist");
     }
 
-    public boolean checkPasswordValidity(){
-
-    }
     @javafx.fxml.FXML
     public void loginButtonOnAction(ActionEvent actionEvent) {
     }
