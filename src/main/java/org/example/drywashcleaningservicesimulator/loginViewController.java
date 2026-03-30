@@ -11,8 +11,12 @@ public class loginViewController {
     private ComboBox<String> userTypeComboBox;
     @javafx.fxml.FXML
     private TextField emailTextField;
+    private String pass;
 
 
+    public void initialize(){
+        userTypeComboBox.getItems().addAll("Customer","Front Desk Receptionist");
+    }
 
     @javafx.fxml.FXML
     public void loginButtonOnAction(ActionEvent actionEvent) {
