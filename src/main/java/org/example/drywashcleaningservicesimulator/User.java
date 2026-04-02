@@ -75,5 +75,7 @@ public abstract class User {
     public boolean validatePassword(String password){
         return true;
     }
+
+
     public abstract void localDashBoard();
 }
