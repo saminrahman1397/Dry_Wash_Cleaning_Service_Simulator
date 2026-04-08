@@ -7,7 +7,6 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.drywashcleaningservicesimulator.SaminRahman.U1G1PlaceOrderForCleaningViewController">
    <children>
       <TextField fx:id="nameTextField" layoutX="77.0" layoutY="27.0" prefHeight="25.0" prefWidth="110.0" />
@@ -29,6 +28,6 @@
       <Label layoutX="186.0" layoutY="187.0" prefHeight="25.0" prefWidth="123.0" style="-fx-background-color: red;" />
       <Button layoutX="33.0" layoutY="187.0" mnemonicParsing="false" onAction="#showPriceOnActionButton" text="Show price breakdown: " />
       <Button layoutX="231.0" layoutY="253.0" mnemonicParsing="false" onAction="#confirmOrderOnActionButton" text="Confirm Order" />
-      <Button layoutX="479.0" layoutY="342.0" mnemonicParsing="false" onAction="#dashboardOnActionButtton" text="Dashboard" />
+      <Button layoutX="479.0" layoutY="342.0" mnemonicParsing="false" onAction="#dashboardOnActionButton" text="Dashboard" />
    </children>
 </AnchorPane>
