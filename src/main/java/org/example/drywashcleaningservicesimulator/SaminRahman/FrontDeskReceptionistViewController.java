@@ -1,6 +1,12 @@
 package org.example.drywashcleaningservicesimulator.SaminRahman;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+
+import java.io.IOException;
 
 public class FrontDeskReceptionistViewController {
     @javafx.fxml.FXML
@@ -8,7 +14,11 @@ public class FrontDeskReceptionistViewController {
     }
 
     @javafx.fxml.FXML
-    public void logoutOnActionButton(ActionEvent actionEvent) {
+    public void logoutOnActionButton(ActionEvent actionEvent) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/org/example/drywashcleaningservicesimulator/loginView.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        Stage stage = (Stage) (((Node) actionEvent.getSource()).getScene().getWindow());
+        stage.setScene(scene);
     }
 
     @javafx.fxml.FXML

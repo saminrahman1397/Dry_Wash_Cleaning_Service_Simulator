@@ -156,6 +156,22 @@ public class Order {
         return assignedDriverID;
     }
 
+    public String getSpecialInstructions() {
+        return specialInstructions;
+    }
+
+    public void setSpecialInstructions(String specialInstructions) {
+        this.specialInstructions = specialInstructions;
+    }
+
+    public String getUrgency() {
+        return urgency;
+    }
+
+    public void setUrgency(String urgency) {
+        this.urgency = urgency;
+    }
+
     public void setAssignedDriverID(String assignedDriverID) {
         this.assignedDriverID = assignedDriverID;
     }
