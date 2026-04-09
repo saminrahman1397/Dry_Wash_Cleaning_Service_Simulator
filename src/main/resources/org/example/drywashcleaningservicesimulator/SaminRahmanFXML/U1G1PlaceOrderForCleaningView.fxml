@@ -2,8 +2,8 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
-<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
@@ -21,13 +21,14 @@
       <Label layoutX="319.0" layoutY="65.0" text="Garment Type:" />
       <Label layoutX="324.0" layoutY="113.0" text="Quantity:" />
       <TextField fx:id="quantityTextField" layoutX="384.0" layoutY="109.0" prefHeight="25.0" prefWidth="49.0" />
-      <DatePicker fx:id="pickupDateDatePicker" layoutX="104.0" layoutY="144.0" prefHeight="25.0" prefWidth="100.0" />
-      <Label layoutX="35.0" layoutY="148.0" text="Pickup Date: " />
       <Label layoutX="324.0" layoutY="148.0" text="Pickup Time: " />
       <ComboBox fx:id="pickupTimeComboBox" layoutX="396.0" layoutY="144.0" prefHeight="25.0" prefWidth="89.0" />
-      <Label layoutX="186.0" layoutY="187.0" prefHeight="25.0" prefWidth="123.0" style="-fx-background-color: red;" />
-      <Button layoutX="33.0" layoutY="187.0" mnemonicParsing="false" onAction="#showPriceOnActionButton" text="Show price breakdown: " />
-      <Button layoutX="231.0" layoutY="253.0" mnemonicParsing="false" onAction="#confirmOrderOnActionButton" text="Confirm Order" />
+      <Button layoutX="47.0" layoutY="253.0" mnemonicParsing="false" onAction="#showPriceOnActionButton" text="Show Price" />
+      <Button layoutX="226.0" layoutY="316.0" mnemonicParsing="false" onAction="#confirmOrderOnActionButton" text="Confirm Order" />
       <Button layoutX="479.0" layoutY="342.0" mnemonicParsing="false" onAction="#dashboardOnActionButton" text="Dashboard" />
+      <ComboBox fx:id="urgencyComboBox" layoutX="118.0" layoutY="144.0" prefHeight="25.0" prefWidth="89.0" />
+      <Label layoutX="42.0" layoutY="148.0" text="Urgency: " />
+      <TextArea fx:id="specialInstructionsTextArea" layoutX="169.0" layoutY="177.0" prefHeight="75.0" prefWidth="158.0" />
+      <Label layoutX="42.0" layoutY="206.0" text="Special Instructions: " />
    </children>
 </AnchorPane>
