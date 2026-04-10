@@ -12,11 +12,11 @@ public class Order {
     private String serviceMethod;
     private ArrayList<GarmentItem> garmentType;
     private LocalDate orderDate;
-    private String orderStatus;
+    private String orderStatus = "Processing";
     private double totalCost;
     private LocalDate pickupDate;
     private String pickupTimeSlot;
-    private String assignedDriverID;
+    private String assignedDriverID = "001";
     private String specialInstructions;
     private String urgency;
 
@@ -29,16 +29,16 @@ public class Order {
         serviceMethod = "TBA";
         garmentType = null;
         orderDate = null;
-        orderStatus = "TBA";
+        orderStatus = "Processing";
         totalCost = 0.0f;
         pickupDate = null;
         pickupTimeSlot = "TBA";
-        assignedDriverID = "TBA";
+        assignedDriverID = "001";
         specialInstructions = "None";
         urgency = "Regular";
     }
 
-    public Order(String orderID, String customerID, String customerName, String phoneNumber, String address, String serviceMethod, ArrayList<GarmentItem> garmentType, LocalDate orderDate, String orderStatus, double totalCost, LocalDate pickupDate, String pickupTimeSlot, String assignedDriverID, String specialInstructions, String urgency) {
+    public Order(String orderID, String customerID, String customerName, String phoneNumber, String address, String serviceMethod, ArrayList<GarmentItem> garmentType, LocalDate orderDate, double totalCost, LocalDate pickupDate, String pickupTimeSlot, String specialInstructions, String urgency) {
         this.orderID = orderID;
         this.customerID = customerID;
         this.customerName = customerName;
@@ -47,11 +47,9 @@ public class Order {
         this.serviceMethod = serviceMethod;
         this.garmentType = garmentType;
         this.orderDate = orderDate;
-        this.orderStatus = orderStatus;
         this.totalCost = totalCost;
         this.pickupDate = pickupDate;
         this.pickupTimeSlot = pickupTimeSlot;
-        this.assignedDriverID = assignedDriverID;
         this.specialInstructions = specialInstructions;
         this.urgency = urgency;
     }
@@ -154,6 +152,22 @@ public class Order {
 
     public String getAssignedDriverID() {
         return assignedDriverID;
+    }
+
+    public String getSpecialInstructions() {
+        return specialInstructions;
+    }
+
+    public void setSpecialInstructions(String specialInstructions) {
+        this.specialInstructions = specialInstructions;
+    }
+
+    public String getUrgency() {
+        return urgency;
+    }
+
+    public void setUrgency(String urgency) {
+        this.urgency = urgency;
     }
 
     public void setAssignedDriverID(String assignedDriverID) {

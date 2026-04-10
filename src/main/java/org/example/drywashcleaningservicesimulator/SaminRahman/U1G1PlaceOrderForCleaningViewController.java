@@ -15,18 +15,18 @@ public class U1G1PlaceOrderForCleaningViewController {
     @javafx.fxml.FXML
     private ComboBox<String> serviceMethodComboBox;
     @javafx.fxml.FXML
-    private DatePicker pickupDateDatePicker;
-    @javafx.fxml.FXML
     private TextField nameTextField;
     @javafx.fxml.FXML
     private ComboBox<String> garmentTypeComboBox;
     @javafx.fxml.FXML
     private TextField quantityTextField;
+    @javafx.fxml.FXML
+    private ComboBox urgencyComboBox;
 
     public void initialize(){
 
     }
-    @javafx.fxml.FXML
+    @Deprecated
     public void dashboardOnActionButtton(ActionEvent actionEvent) {
     }
 
@@ -36,5 +36,9 @@ public class U1G1PlaceOrderForCleaningViewController {
 
     @javafx.fxml.FXML
     public void showPriceOnActionButton(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void dashboardOnActionButton(ActionEvent actionEvent) {
     }
 }
