@@ -7,9 +7,10 @@ import javafx.scene.Scene;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
-import java.io.IOException;
+import java.io.*;
 import java.time.LocalDate;
 
 public class U1G2CancelOrderViewController {
@@ -29,7 +30,41 @@ public class U1G2CancelOrderViewController {
     private TableColumn<Order,Double> costTableColumn;
 
     @javafx.fxml.FXML
+    public void initialize(){
+        statusTableColumn.setCellValueFactory(new PropertyValueFactory<Order,String>("orderStatus"));
+        orderIDTableColumn.setCellValueFactory(new PropertyValueFactory<Order,String>("orderID"));
+        orderDateTableColumn.setCellValueFactory(new PropertyValueFactory<Order,LocalDate>("orderDate"));
+        garmentTableColumn.setCellValueFactory(new PropertyValueFactory<Order,String>("garmentType"));
+        costTableColumn.setCellValueFactory(new PropertyValueFactory<Order,Double>("totalCost"));
+    }
     public void myOrdersOnActionButton(ActionEvent actionEvent) {
+        myOrdersTableView.getItems().clear();
+        File file = new File("Data/orders.bin");
+        FileInputStream fis = null;
+        ObjectInputStream ois = null;
+        try{
+            fis = new FileInputStream(file);
+            ois = new ObjectInputStream(fis);
+            while(true){
+                try{
+                    Order obj = (Order) ois.readObject();
+                    myOrdersTableView.getItems().add(obj);
+                }catch(EOFException e){
+                    break;
+                }
+            }
+        }catch(Exception e){
+            e.printStackTrace();
+        }finally{
+            try{
+                if (ois != null){
+                    ois.close();
+                }
+            }catch(IOException e){
+                e.printStackTrace();
+            }
+
+        }
     }
 
     @javafx.fxml.FXML
