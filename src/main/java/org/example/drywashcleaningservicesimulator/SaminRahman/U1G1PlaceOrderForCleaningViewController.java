@@ -1,9 +1,15 @@
 package org.example.drywashcleaningservicesimulator.SaminRahman;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Scene;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
+
+import java.io.IOException;
 
 public class U1G1PlaceOrderForCleaningViewController {
     @javafx.fxml.FXML
@@ -21,13 +27,10 @@ public class U1G1PlaceOrderForCleaningViewController {
     @javafx.fxml.FXML
     private TextField quantityTextField;
     @javafx.fxml.FXML
-    private ComboBox urgencyComboBox;
+    private ComboBox<String> urgencyComboBox;
 
     public void initialize(){
 
-    }
-    @Deprecated
-    public void dashboardOnActionButtton(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML
@@ -39,6 +42,10 @@ public class U1G1PlaceOrderForCleaningViewController {
     }
 
     @javafx.fxml.FXML
-    public void dashboardOnActionButton(ActionEvent actionEvent) {
+    public void dashboardOnActionButton(ActionEvent actionEvent) throws IOException{
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/org/example/drywashcleaningservicesimulator/SaminRahmanFXML/CustomerView.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        Stage stage = (Stage) (((Node) actionEvent.getSource()).getScene().getWindow());
+        stage.setScene(scene);
     }
 }

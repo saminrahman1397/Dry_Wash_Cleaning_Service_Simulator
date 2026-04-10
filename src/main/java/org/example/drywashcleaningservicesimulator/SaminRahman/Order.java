@@ -11,7 +11,7 @@ public class Order implements Serializable {
     private String phoneNumber;
     private String address;
     private String serviceMethod;
-    private ArrayList<GarmentItem> garmentType;
+    private String garmentType;
     private LocalDate orderDate;
     private String orderStatus = "Processing";
     private double totalCost;
@@ -39,7 +39,7 @@ public class Order implements Serializable {
         urgency = "Regular";
     }
 
-    public Order(String orderID, String customerID, String customerName, String phoneNumber, String address, String serviceMethod, ArrayList<GarmentItem> garmentType, LocalDate orderDate, double totalCost, LocalDate pickupDate, String pickupTimeSlot, String specialInstructions, String urgency) {
+    public Order(String orderID, String customerID, String customerName, String phoneNumber, String address, String serviceMethod, String garmentType, LocalDate orderDate, double totalCost, LocalDate pickupDate, String pickupTimeSlot, String specialInstructions, String urgency) {
         this.orderID = orderID;
         this.customerID = customerID;
         this.customerName = customerName;
@@ -103,11 +103,11 @@ public class Order implements Serializable {
         this.serviceMethod = serviceMethod;
     }
 
-    public ArrayList<GarmentItem> getGarmentType() {
+    public String getGarmentType() {
         return garmentType;
     }
 
-    public void setGarmentType(ArrayList<GarmentItem> garmentType) {
+    public void setGarmentType(String garmentType) {
         this.garmentType = garmentType;
     }
 
