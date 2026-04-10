@@ -39,7 +39,11 @@ public class CustomerViewController {
     }
 
     @javafx.fxml.FXML
-    public void cancelOrderOnActionButton(ActionEvent actionEvent) {
+    public void cancelOrderOnActionButton(ActionEvent actionEvent) throws IOException{
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/org/example/drywashcleaningservicesimulator/SaminRahmanFXML/U1G2CancelOrderView.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        Stage stage = (Stage) (((Node) actionEvent.getSource()).getScene().getWindow());
+        stage.setScene(scene);
     }
 
     @javafx.fxml.FXML
