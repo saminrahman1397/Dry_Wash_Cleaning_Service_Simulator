@@ -91,7 +91,21 @@ public class U1G1PlaceOrderForCleaningViewController {
     @javafx.fxml.FXML
     public void confirmOrderOnActionButton(ActionEvent actionEvent) {
         if(validAddress() && validName() && validPhoneNumber() && validQuantity() && ComboBoxValidityCheck()){
-
+            /* private String orderID;
+    private String customerID;
+    private String customerName;
+    private String phoneNumber;
+    private String address;
+    private String serviceMethod;
+    private String garmentType;
+    private LocalDate orderDate;
+    private String orderStatus = "Processing";
+    private double totalCost;
+    private LocalDate pickupDate;
+    private String pickupTimeSlot;
+    private String assignedDriverID = "001";
+    private String specialInstructions;
+    private String urgency; */
 
         }
 
