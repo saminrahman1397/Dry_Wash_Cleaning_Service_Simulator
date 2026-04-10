@@ -4,13 +4,12 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
+import org.example.drywashcleaningservicesimulator.utility.OrderUtility;
 
 import java.io.IOException;
+import java.time.LocalDate;
 
 public class U1G1PlaceOrderForCleaningViewController {
     @javafx.fxml.FXML
@@ -29,6 +28,8 @@ public class U1G1PlaceOrderForCleaningViewController {
     private TextField quantityTextField;
     @javafx.fxml.FXML
     private ComboBox<String> urgencyComboBox;
+    @javafx.fxml.FXML
+    private TextArea specialInstructionsTextArea;
 
     public void initialize(){
         pickupTimeComboBox.getItems().addAll("Morning", "Afternoon", "Evening");
@@ -88,11 +89,56 @@ public class U1G1PlaceOrderForCleaningViewController {
         }
         return true;
     }
+
+    public double calculateTotalCost() {
+        double costPerItem = 0;
+        //"Shirt/T-Shirt","Pant/Panjabi","Sari","Suit/Blazer","Blanket"
+        if (garmentTypeComboBox.getValue().equals("Shirt/T-Shirt")) {
+            costPerItem = 60;
+        } else if (garmentTypeComboBox.getValue().equals("Pant/Panjabi")) {
+            costPerItem = 80;
+        } else if ((garmentTypeComboBox.getValue().equals("Sari"))) {
+            costPerItem = 100;
+        } else if ((garmentTypeComboBox.getValue().equals("Suit/Blazer"))) {
+            costPerItem = 400;
+        } else if ((garmentTypeComboBox.getValue().equals("Blanket"))) {
+            costPerItem = 700;
+        }
+        double amount = Double.parseDouble(quantityTextField.getText());
+        return amount * costPerItem;
+    }
     @javafx.fxml.FXML
     public void confirmOrderOnActionButton(ActionEvent actionEvent) {
         if(validAddress() && validName() && validPhoneNumber() && validQuantity() && ComboBoxValidityCheck()){
+            Order newOrder = new Order();
+            String generatedID = OrderUtility.getNextOrderID();
+            newOrder.setOrderID(generatedID);
+            newOrder.setCustomerName(nameTextField.getText());
+            newOrder.setPhoneNumber(phoneNumberTextField.getText());
+            newOrder.setAddress(addressTextField.getText());
+            newOrder.setServiceMethod(serviceMethodComboBox.getValue());
+            newOrder.setGarmentType(garmentTypeComboBox.getValue());
+            newOrder.setOrderDate(LocalDate.now());
+            newOrder.setTotalCost(calculateTotalCost());
+            if (urgencyComboBox.getValue().equals("Regular")){
+                newOrder.setPickupDate(newOrder.getOrderDate().plusWeeks(1));
+            }else{
+                newOrder.setPickupDate(newOrder.getOrderDate().plusDays(4));
+            }
+            newOrder.setPickupTimeSlot(pickupTimeComboBox.getValue());
+            newOrder.setSpecialInstructions(specialInstructionsTextArea.getText());
+            newOrder.setUrgency(urgencyComboBox.getValue());
 
+            OrderUtility.SaveOrder(newOrder);
+            Alert a = new Alert(Alert.AlertType.CONFIRMATION);
+            a.setContentText("Order Successfully Added, ID " + generatedID);
+            a.showAndWait();
 
+            nameTextField.clear();
+            phoneNumberTextField.clear();
+            addressTextField.clear();
+            quantityTextField.clear();
+            specialInstructionsTextArea.clear();
         }
 
 
@@ -100,6 +146,9 @@ public class U1G1PlaceOrderForCleaningViewController {
 
     @javafx.fxml.FXML
     public void showPriceOnActionButton(ActionEvent actionEvent) {
+        Alert a = new Alert(Alert.AlertType.INFORMATION);
+        a.setContentText("Your Total will be " + calculateTotalCost());
+        a.showAndWait();
     }
 
     @javafx.fxml.FXML

@@ -23,7 +23,7 @@ public class Order implements Serializable {
 
     public Order() {
         orderID = "TBA";
-        customerID = "TBA";
+        customerID = "0001";
         customerName = "TBA";
         phoneNumber = "TBA";
         address = "TBA";
