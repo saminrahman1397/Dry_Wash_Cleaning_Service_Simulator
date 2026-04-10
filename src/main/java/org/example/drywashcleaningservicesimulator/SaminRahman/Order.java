@@ -1,9 +1,10 @@
 package org.example.drywashcleaningservicesimulator.SaminRahman;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
-public class Order {
+public class Order implements Serializable {
     private String orderID;
     private String customerID;
     private String customerName;

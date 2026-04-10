@@ -15,6 +15,7 @@ public class CustomerViewController {
         Scene scene = new Scene(fxmlLoader.load());
         Stage stage = (Stage) (((Node) actionEvent.getSource()).getScene().getWindow());
         stage.setScene(scene);
+        stage.show();
     }
 
     @javafx.fxml.FXML
