@@ -15,6 +15,7 @@ public class CustomerViewController {
         Scene scene = new Scene(fxmlLoader.load());
         Stage stage = (Stage) (((Node) actionEvent.getSource()).getScene().getWindow());
         stage.setScene(scene);
+        stage.show();
     }
 
     @javafx.fxml.FXML
@@ -30,7 +31,11 @@ public class CustomerViewController {
     }
 
     @javafx.fxml.FXML
-    public void placeOrderOnActionButton(ActionEvent actionEvent) {
+    public void placeOrderOnActionButton(ActionEvent actionEvent) throws IOException{
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/org/example/drywashcleaningservicesimulator/SaminRahmanFXML/U1G1PlaceOrderForCleaningView.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        Stage stage = (Stage) (((Node) actionEvent.getSource()).getScene().getWindow());
+        stage.setScene(scene);
     }
 
     @javafx.fxml.FXML
