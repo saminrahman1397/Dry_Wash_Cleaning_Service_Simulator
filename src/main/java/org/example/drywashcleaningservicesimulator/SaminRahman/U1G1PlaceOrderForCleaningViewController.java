@@ -146,6 +146,9 @@ public class U1G1PlaceOrderForCleaningViewController {
 
     @javafx.fxml.FXML
     public void showPriceOnActionButton(ActionEvent actionEvent) {
+        Alert a = new Alert(Alert.AlertType.INFORMATION);
+        a.setContentText("Your Total will be " + calculateTotalCost());
+        a.showAndWait();
     }
 
     @javafx.fxml.FXML
