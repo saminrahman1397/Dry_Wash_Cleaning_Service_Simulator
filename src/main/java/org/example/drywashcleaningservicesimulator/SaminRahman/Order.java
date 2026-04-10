@@ -36,7 +36,7 @@ public class Order implements Serializable {
         pickupTimeSlot = "TBA";
         assignedDriverID = "001";
         specialInstructions = "None";
-        urgency = "Regular";
+        urgency = "TBA";
     }
 
     public Order(String orderID, String customerID, String customerName, String phoneNumber, String address, String serviceMethod, String garmentType, LocalDate orderDate, double totalCost, LocalDate pickupDate, String pickupTimeSlot, String specialInstructions, String urgency) {
