@@ -1,8 +1,12 @@
 package org.example.drywashcleaningservicesimulator.SaminRahman;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -81,6 +85,10 @@ public class U2G7HandleGarmentDamageViewController {
     }
 
     @javafx.fxml.FXML
-    public void dashBoardOnActionButton(ActionEvent actionEvent) {
+    public void dashBoardOnActionButton(ActionEvent actionEvent) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/org/example/drywashcleaningservicesimulator/SaminRahmanFXML/FrontDeskReceptionistView.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        Stage stage = (Stage) (((Node) actionEvent.getSource()).getScene().getWindow());
+        stage.setScene(scene);
     }
 }
