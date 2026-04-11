@@ -1,32 +1,39 @@
-package org.example.drywashcleaningservicesimulator;
+package org.example.drywashcleaningservicesimulator.sheikhsafinmehedi;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class deliveryhistoryController
+public class dailyreportController
 {
     @javafx.fxml.FXML
-    private TableColumn orderIDTableColumn;
+    private TextField totalDeliveryTextField;
     @javafx.fxml.FXML
-    private TableColumn customerNameTableColumn;
+    private TextField totalReportTextField;
     @javafx.fxml.FXML
-    private TableColumn addressTableColumn;
-    @javafx.fxml.FXML
-    private TableColumn deliveredTableColumn;
-    @javafx.fxml.FXML
-    private TableView deliveryHistoryTableView;
-    @javafx.fxml.FXML
-    private TableColumn timeSlotTableColumn;
+    private TextArea summaryTextArea;
 
     @javafx.fxml.FXML
     public void initialize() {
+    }
+
+    @javafx.fxml.FXML
+    public void doneOnActionButton(ActionEvent actionEvent) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("done.fxml"));
+
+        Scene scene = new Scene(fxmlLoader.load());
+
+        Stage stage = (Stage)((Node) actionEvent.getSource()).getScene().getWindow();
+
+        stage.setScene(scene);
+
+        stage.show();
     }
 
     @javafx.fxml.FXML

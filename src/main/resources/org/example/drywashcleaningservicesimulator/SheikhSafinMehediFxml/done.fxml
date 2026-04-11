@@ -6,7 +6,7 @@
 <?import javafx.scene.text.Text?>
 
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.drywashcleaningservicesimulator.doneController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.drywashcleaningservicesimulator.sheikhsafinmehedi.doneController">
    <children>
       <Text layoutX="118.0" layoutY="133.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Daily Report Updated." wrappingWidth="382.970703125">
          <font>

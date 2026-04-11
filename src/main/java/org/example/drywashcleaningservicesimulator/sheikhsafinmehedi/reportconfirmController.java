@@ -1,26 +1,22 @@
-package org.example.drywashcleaningservicesimulator;
+package org.example.drywashcleaningservicesimulator.sheikhsafinmehedi;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
-import javafx.scene.control.TextArea;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class reportdamageController
+public class reportconfirmController
 {
-    @javafx.fxml.FXML
-    private TextArea descriptionTextArea;
-
     @javafx.fxml.FXML
     public void initialize() {
     }
 
     @javafx.fxml.FXML
-    public void reportOnActionButton(ActionEvent actionEvent) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("reportconfirm.fxml"));
+    public void dashboardOnActionButton(ActionEvent actionEvent) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("cleaningtechniciandashboard.fxml"));
 
         Scene scene = new Scene(fxmlLoader.load());
 
@@ -29,5 +25,6 @@ public class reportdamageController
         stage.setScene(scene);
 
         stage.show();
+
     }
 }

@@ -1,4 +1,4 @@
-package org.example.drywashcleaningservicesimulator;
+package org.example.drywashcleaningservicesimulator.sheikhsafinmehedi;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
@@ -8,7 +8,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class reportconfirmController
+public class doneController
 {
     @javafx.fxml.FXML
     public void initialize() {
@@ -16,7 +16,7 @@ public class reportconfirmController
 
     @javafx.fxml.FXML
     public void dashboardOnActionButton(ActionEvent actionEvent) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("cleaningtechniciandashboard.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("deliverydriverdashboard.fxml"));
 
         Scene scene = new Scene(fxmlLoader.load());
 
@@ -25,6 +25,5 @@ public class reportconfirmController
         stage.setScene(scene);
 
         stage.show();
-
     }
 }
