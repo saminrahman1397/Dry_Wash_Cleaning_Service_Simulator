@@ -1,4 +1,6 @@
 package org.example.drywashcleaningservicesimulator.OmarYeasinKhan;
+import org.example.drywashcleaningservicesimulator.utility.AppendableObjectOutputStream;
+
 import java.io.*;
 import java.util.ArrayList;
 
@@ -10,6 +12,8 @@ public class Attendance implements Serializable{
     private boolean attendanceDD;
     private boolean attendanceCCR;
     private boolean attendanceOC;
+
+
 
     public Attendance(){
         this.attendanceSBM = false;
@@ -68,6 +72,7 @@ public class Attendance implements Serializable{
 
     public static ArrayList<Attendance> loadAllFromFile(){
         try{
+
             FileInputStream fis =  new FileInputStream("OmarsFiles/attendance.bin");
             ObjectInputStream ois = new ObjectInputStream(fis);
 
@@ -80,18 +85,24 @@ public class Attendance implements Serializable{
         } catch (FileNotFoundException e){
             return new ArrayList<>();
         } catch (IOException | ClassNotFoundException e) {
-            System.out.println("Error loading attendance");
+            e.printStackTrace();
             return new ArrayList<>();
         }
     }
 
     private static void writeAll(ArrayList<Attendance> list) {
         try {
-            FileOutputStream fos = new FileOutputStream("OmarsFiles/attendance.bin");
-            ObjectOutputStream oos = new ObjectOutputStream(fos);
+            File attendanceFile = new File("OmarsFiles/attendance.bin");
+            FileOutputStream fos = new FileOutputStream(attendanceFile, true);
+            ObjectOutputStream oos;
+            if (attendanceFile.exists() || attendanceFile.length() > 0){
+                oos = new AppendableObjectOutputStream(fos);
+            } else {
+                oos = new ObjectOutputStream(fos);
+            }
             oos.writeObject(list);
         } catch (IOException e) {
-            System.out.println("Error saving attendance");
+            e.printStackTrace();
         }
     }
 
