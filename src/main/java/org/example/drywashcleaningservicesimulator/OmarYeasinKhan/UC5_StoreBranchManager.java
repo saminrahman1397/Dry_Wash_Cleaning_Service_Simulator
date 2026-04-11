@@ -31,6 +31,10 @@ public class UC5_StoreBranchManager extends User implements Serializable {
 
     }
     public ArrayList<U5G4_ViewFeedback> viewFeedback(){
+        return U5G4_ViewFeedback.loadAllFromFile();
+    }
+
+    public void setDailyTargets(double dailyRevenueTarget, int dailyOrderTarget) {
 
     }
 }

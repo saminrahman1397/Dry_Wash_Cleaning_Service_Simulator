@@ -91,7 +91,7 @@ public class U5G3_Attendance implements Serializable{
         }
     }
 
-    private static void writeAll(ArrayList<U5G3_Attendance> list) {
+    public static void writeAll(ArrayList<U5G3_Attendance> list) {
         try {
             File attendanceFile = new File("OmarsFiles/attendance.bin");
             FileOutputStream fos = new FileOutputStream(attendanceFile, true);
