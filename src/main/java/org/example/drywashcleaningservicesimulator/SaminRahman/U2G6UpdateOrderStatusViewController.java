@@ -1,13 +1,14 @@
 package org.example.drywashcleaningservicesimulator.SaminRahman;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
 
-import java.io.EOFException;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.ObjectInputStream;
+import java.io.*;
 import java.util.ArrayList;
 
 public class U2G6UpdateOrderStatusViewController {
@@ -37,10 +38,32 @@ public class U2G6UpdateOrderStatusViewController {
     public void changeStatusOnActionButton(ActionEvent actionEvent) {
         File file = new File("Data/orders.bin");
         boolean found = false;
+        try(ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(file))){
+            for(Order o : ordersList){
+                if(o.getOrderID().equals(orderIDTextField.getText())){
+                    o.setOrderStatus(orderStatusComboBox.getValue());
+                    found = true;
+                    Alert a = new Alert(Alert.AlertType.CONFIRMATION);
+                    a.setContentText("Status Changed Successfully");
+                    a.showAndWait();
+                }oos.writeObject(o);
+            }
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+        if(!found){
+            Alert a = new Alert(Alert.AlertType.ERROR);
+            a.setContentText("Invalid Order ID");
+            a.showAndWait();
+        }
     }
 
     @javafx.fxml.FXML
-    public void dashboardOnActionButton(ActionEvent actionEvent) {
+    public void dashboardOnActionButton(ActionEvent actionEvent) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/org/example/drywashcleaningservicesimulator/SaminRahmanFXML/FrontDeskReceptionistView.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        Stage stage = (Stage) (((Node) actionEvent.getSource()).getScene().getWindow());
+        stage.setScene(scene);
     }
 
     @javafx.fxml.FXML
