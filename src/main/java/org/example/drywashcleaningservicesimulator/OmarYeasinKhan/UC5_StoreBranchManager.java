@@ -1,14 +1,13 @@
 package org.example.drywashcleaningservicesimulator.OmarYeasinKhan;
 import org.example.drywashcleaningservicesimulator.User;
 
-import java.io.*;
-import java.time.LocalDate;
+import java.io.Serializable;
 import java.util.*;
 
 
-public class UC6_StoreBranchManager extends User {
+public class UC5_StoreBranchManager extends User implements Serializable {
 
-    public UC6_StoreBranchManager(String userID, String userName, String email, String password, String role, String phoneNumber, String address) {
+    public UC5_StoreBranchManager(String userID, String userName, String email, String password, String role, String phoneNumber, String address) {
         super(userID, userName, email, password, role);
 
 
@@ -27,8 +26,11 @@ public class UC6_StoreBranchManager extends User {
     /* public boolean approveRefundRequest(String refundRequestID, String decision){
 
      } */
-    public ArrayList<Attendance> viewAttendance(){
-        return Attendance.loadAllFromFile();
+    public ArrayList<U5G3_Attendance> viewAttendance(){
+        return U5G3_Attendance.loadAllFromFile();
+
+    }
+    public ArrayList<U5G4_ViewFeedback> viewFeedback(){
 
     }
 }

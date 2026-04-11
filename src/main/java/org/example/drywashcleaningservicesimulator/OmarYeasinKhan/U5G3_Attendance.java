@@ -4,7 +4,7 @@ import org.example.drywashcleaningservicesimulator.utility.AppendableObjectOutpu
 import java.io.*;
 import java.util.ArrayList;
 
-public class Attendance implements Serializable{
+public class U5G3_Attendance implements Serializable{
     private boolean attendanceSBM;
     private boolean attendanceIM;
     private boolean attendanceFDR;
@@ -15,7 +15,7 @@ public class Attendance implements Serializable{
 
 
 
-    public Attendance(){
+    public U5G3_Attendance(){
         this.attendanceSBM = false;
         this.attendanceIM = false;
         this.attendanceFDR = false;
@@ -70,19 +70,20 @@ public class Attendance implements Serializable{
     }
 
 
-    public static ArrayList<Attendance> loadAllFromFile(){
+    public static ArrayList<U5G3_Attendance> loadAllFromFile(){
         try{
             File attendanceFile = new File("OmarsFiles/attendance.bin");
             FileInputStream fis =  new FileInputStream(attendanceFile);
             ObjectInputStream ois = new ObjectInputStream(fis);
 
-            ArrayList<Attendance> list = (ArrayList<Attendance>) ois.readObject();
+            ArrayList<U5G3_Attendance> list = (ArrayList<U5G3_Attendance>) ois.readObject();
 
             ois.close();
             fis.close();
             return list;
 
         } catch (FileNotFoundException e){
+            e.printStackTrace();
             return new ArrayList<>();
         } catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
@@ -90,7 +91,7 @@ public class Attendance implements Serializable{
         }
     }
 
-    private static void writeAll(ArrayList<Attendance> list) {
+    private static void writeAll(ArrayList<U5G3_Attendance> list) {
         try {
             File attendanceFile = new File("OmarsFiles/attendance.bin");
             FileOutputStream fos = new FileOutputStream(attendanceFile, true);
@@ -107,7 +108,7 @@ public class Attendance implements Serializable{
     }
 
     public void saveToFile() {
-        ArrayList<Attendance> list = loadAllFromFile();
+        ArrayList<U5G3_Attendance> list = loadAllFromFile();
         list.add(this);
         writeAll(list);
     }
