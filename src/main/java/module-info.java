@@ -5,6 +5,7 @@ module org.example.drywashcleaningservicesimulator {
     requires java.desktop;
 
 
+
     opens org.example.drywashcleaningservicesimulator to javafx.fxml;
     opens org.example.drywashcleaningservicesimulator.SaminRahman to javafx.fxml, javafx.base;
     opens org.example.drywashcleaningservicesimulator.OmarYeasinKhan to javafx.fxml, javafx.base;

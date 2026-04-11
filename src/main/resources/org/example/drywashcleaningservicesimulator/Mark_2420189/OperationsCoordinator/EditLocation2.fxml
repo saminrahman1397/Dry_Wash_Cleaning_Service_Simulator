@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.drywashcleaningservicesimulator.Mark_2420189.OperationsCoordinator.EditLocation2Controller">
+   <children>
+      <Label alignment="CENTER" layoutX="159.0" layoutY="34.0" prefHeight="46.0" prefWidth="286.0" text="Update Locations">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="messageLabel" alignment="CENTER_RIGHT" layoutX="356.0" layoutY="4.0" prefHeight="18.0" prefWidth="241.0" />
+      <TextField fx:id="locationNameTF" layoutX="118.0" layoutY="128.0" />
+      <TextArea fx:id="locationAddressTA" layoutX="328.0" layoutY="129.0" prefHeight="110.0" prefWidth="250.0" />
+      <TextField fx:id="locationHoursTF" layoutX="118.0" layoutY="194.0" />
+      <Label layoutX="25.0" layoutY="132.0" text="Location Name: " />
+      <Label layoutX="25.0" layoutY="198.0" text="Operating hours: " />
+      <Label layoutX="328.0" layoutY="101.0" text="Location Address: " />
+      <Button alignment="CENTER" layoutX="253.0" layoutY="283.0" mnemonicParsing="false" onAction="#editButtonOA" prefHeight="57.0" prefWidth="98.0" text="Edit Location" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
