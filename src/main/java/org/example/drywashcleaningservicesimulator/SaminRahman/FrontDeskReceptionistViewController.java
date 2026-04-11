@@ -10,7 +10,11 @@ import java.io.IOException;
 
 public class FrontDeskReceptionistViewController {
     @javafx.fxml.FXML
-    public void handOverOrderOnActionButton(ActionEvent actionEvent) {
+    public void handOverOrderOnActionButton(ActionEvent actionEvent) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/org/example/drywashcleaningservicesimulator/SaminRahmanFXML/U2G4HandOverCompletedOrder.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        Stage stage = (Stage) (((Node) actionEvent.getSource()).getScene().getWindow());
+        stage.setScene(scene);
     }
 
     @javafx.fxml.FXML

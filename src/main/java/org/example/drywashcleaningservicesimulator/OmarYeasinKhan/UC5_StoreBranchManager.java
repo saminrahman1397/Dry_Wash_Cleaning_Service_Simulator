@@ -30,7 +30,7 @@ public class UC5_StoreBranchManager extends User implements Serializable {
         return U5G3_Attendance.loadAllFromFile();
 
     }
-    public ArrayList<U5G4_ViewFeedback> viewFeedback(){
+    /*public ArrayList<U5G4_ViewFeedback> viewFeedback() {
 
-    }
+    }*/
 }
