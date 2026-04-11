@@ -55,9 +55,6 @@ public class loginViewController {
                 Stage stage = (Stage) (((Node) actionEvent.getSource()).getScene().getWindow());
                 stage.setScene(scene);
             }
-
-
-
         }
         else{
             Alert a = new Alert(Alert.AlertType.ERROR);

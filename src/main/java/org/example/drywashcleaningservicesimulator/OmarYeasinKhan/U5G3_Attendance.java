@@ -1,5 +1,5 @@
 package org.example.drywashcleaningservicesimulator.OmarYeasinKhan;
-import org.example.drywashcleaningservicesimulator.utility.AppendableObjectOutputStream;
+import org.example.drywashcleaningservicesimulator.utilitySamin.AppendableObjectOutputStream;
 
 import java.io.*;
 import java.util.ArrayList;

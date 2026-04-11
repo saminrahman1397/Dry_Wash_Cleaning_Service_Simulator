@@ -1,4 +1,4 @@
-package org.example.drywashcleaningservicesimulator.utility;
+package org.example.drywashcleaningservicesimulator.utilitySamin;
 
 import java.io.IOException;
 import java.io.ObjectOutputStream;
