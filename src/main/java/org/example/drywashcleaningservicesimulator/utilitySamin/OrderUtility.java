@@ -1,4 +1,4 @@
-package org.example.drywashcleaningservicesimulator.utility;
+package org.example.drywashcleaningservicesimulator.utilitySamin;
 
 import org.example.drywashcleaningservicesimulator.SaminRahman.Order;
 

@@ -1,6 +1,5 @@
 package org.example.drywashcleaningservicesimulator.Mark_2420189.Customer_Care_Representative;
 
-import com.sun.net.httpserver.Authenticator;
 import cse213.drycleaning.Mark_2420189.GenericFileManager;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;

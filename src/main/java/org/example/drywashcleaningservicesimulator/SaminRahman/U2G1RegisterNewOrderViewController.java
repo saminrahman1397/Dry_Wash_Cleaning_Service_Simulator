@@ -6,7 +6,7 @@ import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
-import org.example.drywashcleaningservicesimulator.utility.OrderUtility;
+import org.example.drywashcleaningservicesimulator.utilitySamin.OrderUtility;
 
 import java.io.IOException;
 import java.time.LocalDate;
