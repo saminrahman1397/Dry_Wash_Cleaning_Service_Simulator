@@ -12,4 +12,5 @@ module org.example.drywashcleaningservicesimulator {
     exports org.example.drywashcleaningservicesimulator;
     exports org.example.drywashcleaningservicesimulator.SaminRahman;
     exports org.example.drywashcleaningservicesimulator.OmarYeasinKhan;
+    opens org.example.drywashcleaningservicesimulator.sheikhsafinmehedi to javafx.fxml;
 }

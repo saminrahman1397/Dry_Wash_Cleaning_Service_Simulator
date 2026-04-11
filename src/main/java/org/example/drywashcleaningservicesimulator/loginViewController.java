@@ -55,6 +55,18 @@ public class loginViewController {
                 Stage stage = (Stage) (((Node) actionEvent.getSource()).getScene().getWindow());
                 stage.setScene(scene);
             }
+            else if (userTypeComboBox.getValue().equals("Cleaning Technician")){
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("SheikhSafinMehediFxml/cleaningtechniciandashboard.fxml"));
+                Scene scene = new Scene(fxmlLoader.load());
+                Stage stage = (Stage) (((Node) actionEvent.getSource()).getScene().getWindow());
+                stage.setScene(scene);
+            }
+            else if (userTypeComboBox.getValue().equals("Delivery Driver")){
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("SheikhSafinMehediFxml/deliverydriverdashboard.fxml"));
+                Scene scene = new Scene(fxmlLoader.load());
+                Stage stage = (Stage) (((Node) actionEvent.getSource()).getScene().getWindow());
+                stage.setScene(scene);
+            }
         }
         else{
             Alert a = new Alert(Alert.AlertType.ERROR);
