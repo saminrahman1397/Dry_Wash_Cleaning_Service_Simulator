@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.drywashcleaningservicesimulator.Mark_2420189.OperationsCoordinator.StaffAvailabilityController">
+    <children>
+        <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#backButtonOA" prefHeight="30.0" prefWidth="100.0" text="← Dashboard" textAlignment="CENTER">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font></Button>
+        <Label alignment="CENTER" layoutX="106.0" layoutY="32.0" prefHeight="46.0" prefWidth="386.0" text="Manage Staff Availability Status">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+        <Label fx:id="messageLabel" alignment="CENTER_RIGHT" layoutX="356.0" layoutY="2.0" prefHeight="18.0" prefWidth="241.0" />
+
+        <TableView fx:id="staffTable" layoutX="22.0" layoutY="140.0" prefHeight="182.0" prefWidth="553.0">
+            <columns>
+                <TableColumn fx:id="staffIDColumn" prefWidth="80.0" text="Staff ID" />
+                <TableColumn fx:id="staffNameColumn" prefWidth="214.39996337890625" text="Staff Name" />
+                <TableColumn fx:id="staffRoleColumn" prefWidth="140.79998779296875" text="Staff Role" />
+                <TableColumn fx:id="availabilityColumn" prefWidth="118.4000244140625" text="Availability Status" />
+            </columns>
+        </TableView>
+
+        <Button layoutX="200.0" layoutY="334.0" mnemonicParsing="false" onAction="#toggleAvailabilityButtonOA" prefHeight="40.0" prefWidth="200.0" text="Toggle Availability">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Button>
+      <Button layoutX="228.0" layoutY="78.0" mnemonicParsing="false" onAction="#loadAssignedButtonOA" prefHeight="40.0" prefWidth="142.0" text="Load Assigned Staff">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+    </children>
+</AnchorPane>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.drywashcleaningservicesimulator.Mark_2420189.OperationsCoordinator.AddStaffController">
+    <children>
+        <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#backButtonOA" prefHeight="30.0" prefWidth="100.0" text="← Dashboard" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+        <Label alignment="CENTER" layoutX="157.0" layoutY="32.0" prefHeight="46.0" prefWidth="286.0" text="Add New Staff Member">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+        <Label fx:id="messageLabel" alignment="CENTER_RIGHT" layoutX="354.0" layoutY="2.0" prefHeight="18.0" prefWidth="241.0" />
+
+        <TextField fx:id="staffNameTF" layoutX="150.0" layoutY="86.0" prefWidth="250.0" />
+        <ComboBox fx:id="staffRoleCB" layoutX="150.0" layoutY="173.0" prefWidth="200.0" />
+        <TextField fx:id="staffPhoneTF" layoutX="150.0" layoutY="218.0" prefWidth="200.0" />
+        <TextField fx:id="staffEmailTF" layoutX="150.0" layoutY="265.0" prefWidth="250.0" />
+        <DatePicker fx:id="hireDateDP" layoutX="150.0" layoutY="307.0" prefWidth="150.0" />
+
+        <Label layoutX="30.0" layoutY="90.0" text="Staff Name:" />
+        <Label layoutX="30.0" layoutY="177.0" text="Staff Role:" />
+        <Label layoutX="30.0" layoutY="222.0" text="Phone Number:" />
+        <Label layoutX="30.0" layoutY="269.0" text="Email:" />
+        <Label layoutX="30.0" layoutY="313.0" text="Hire Date:" />
+
+        <Button layoutX="250.0" layoutY="349.0" mnemonicParsing="false" onAction="#saveStaffButtonOA" prefHeight="40.0" prefWidth="100.0" text="Save Staff">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Button>
+      <TextField fx:id="staffIdTF" layoutX="150.0" layoutY="128.0" prefHeight="26.0" prefWidth="150.0" />
+      <Label layoutX="30.0" layoutY="132.0" text="Staff ID:" />
+    </children>
+</AnchorPane>
