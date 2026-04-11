@@ -24,6 +24,7 @@ public class Order implements Serializable {
     private double discountAmount;
     private String issues = "None";
     private String issueDescription;
+    private String refundReason = "TBA";
 
     public Order() {
         orderID = "TBA";
@@ -44,6 +45,7 @@ public class Order implements Serializable {
         paymentStatus = "unpaid";
         issues = "None";
         issueDescription = "TBA";
+        refundReason = "TBA";
     }
 
     public Order(String orderID, String customerID, String customerName, String phoneNumber, String address, String serviceMethod, String garmentType, LocalDate orderDate, double totalCost, LocalDate pickupDate, String pickupTimeSlot, String specialInstructions, String urgency) {
@@ -60,6 +62,14 @@ public class Order implements Serializable {
         this.pickupTimeSlot = pickupTimeSlot;
         this.specialInstructions = specialInstructions;
         this.urgency = urgency;
+    }
+
+    public String getRefundReason() {
+        return refundReason;
+    }
+
+    public void setRefundReason(String refundReason) {
+        this.refundReason = refundReason;
     }
 
     public String getIssues() {

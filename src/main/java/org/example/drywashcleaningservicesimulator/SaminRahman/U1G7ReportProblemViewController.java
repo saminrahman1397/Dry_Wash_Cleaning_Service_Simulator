@@ -49,7 +49,6 @@ public class U1G7ReportProblemViewController {
             while (true) {
                 try {
                     Order obj = (Order) ois.readObject();
-                    // Filtering for unpaid orders
                     if (!obj.getOrderStatus().equals("Cancelled")) {
                         reportProblemTableView.getItems().add(obj);
                     }

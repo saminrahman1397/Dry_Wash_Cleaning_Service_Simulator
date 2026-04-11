@@ -55,7 +55,6 @@ public class U1G4MakePaymentViewController {
             while (true) {
                 try {
                     Order obj = (Order) ois.readObject();
-                    // Filtering for unpaid orders
                     if (obj.getPaymentStatus().equals("unpaid")) {
                         makePaymentTableView.getItems().add(obj);
                     }

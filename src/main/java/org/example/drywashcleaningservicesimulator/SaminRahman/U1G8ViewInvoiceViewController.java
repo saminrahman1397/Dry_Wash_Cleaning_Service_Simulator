@@ -49,7 +49,6 @@ public class U1G8ViewInvoiceViewController {
             while (true) {
                 try {
                     Order obj = (Order) ois.readObject();
-                    // Filtering for unpaid orders
                     if (!obj.getOrderStatus().equals("Cancelled")) {
                         invoiceTableVIew.getItems().add(obj);
                     }

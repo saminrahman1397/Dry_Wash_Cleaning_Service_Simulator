@@ -48,7 +48,6 @@ public class U1G5TrackOrderStatusViewController {
             while (true) {
                 try {
                     Order obj = (Order) ois.readObject();
-                    // Filtering for unpaid orders
                     if (!obj.getOrderStatus().equals("Cancelled")) {
                         trackStatusTableView.getItems().add(obj);
                     }

@@ -3,7 +3,7 @@ module org.example.drywashcleaningservicesimulator {
     requires javafx.fxml;
     requires javafx.base;
     requires java.desktop;
-    requires jdk.httpserver;
+
 
 
     opens org.example.drywashcleaningservicesimulator to javafx.fxml;
