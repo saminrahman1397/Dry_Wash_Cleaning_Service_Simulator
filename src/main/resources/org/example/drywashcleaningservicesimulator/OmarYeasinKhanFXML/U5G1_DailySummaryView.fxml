@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.drywashcleaningservicesimulator.OmarYeasinKhan.U5G1_DailySummaryViewController">
+   <children>
+      <Label fx:id="totalOrdersLabel" layoutX="55.0" layoutY="121.0" prefHeight="50.0" prefWidth="102.0" style="-fx-background-color: cyan;" text="Total Orders" />
+      <Label fx:id="pendingOrdersLabel" layoutX="175.0" layoutY="121.0" prefHeight="50.0" prefWidth="102.0" style="-fx-background-color: cyan;" text="Pending Orders" />
+      <Label fx:id="completedOrdersLabel" layoutX="300.0" layoutY="121.0" prefHeight="50.0" prefWidth="102.0" style="-fx-background-color: cyan;" text="Completed Orders" />
+      <Label fx:id="cancelledOrdersLabel" layoutX="420.0" layoutY="121.0" prefHeight="50.0" prefWidth="102.0" style="-fx-background-color: cyan;" text="Cancelled Orders" />
+      <Label fx:id="inProgressOrdersLabel" layoutX="55.0" layoutY="193.0" prefHeight="50.0" prefWidth="102.0" style="-fx-background-color: cyan;" text="In Progress Orders" />
+      <Label fx:id="totalRevenLabel" layoutX="175.0" layoutY="193.0" prefHeight="50.0" prefWidth="102.0" style="-fx-background-color: cyan;" text="Total Revenue" />
+      <Button layoutX="55.0" layoutY="26.0" mnemonicParsing="false" onAction="#dashboardOA" text="Dashboard" />
+   </children>
+</AnchorPane>

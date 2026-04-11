@@ -2,36 +2,42 @@ package org.example.drywashcleaningservicesimulator.OmarYeasinKhan;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class U5G3_AttendanceViewController {
     @javafx.fxml.FXML
-    private TableView<U5G3_Attendance> attendanceTV;
+    private TableView attendanceTV;
     @javafx.fxml.FXML
     private Button loadAttendanceButton;
     @javafx.fxml.FXML
-    private TableColumn<U5G3_Attendance, Boolean> sbmCol;
+    private TableColumn sbmCol;
     @javafx.fxml.FXML
-    private TableColumn<U5G3_Attendance, Boolean> imCol;
+    private TableColumn imCol;
     @javafx.fxml.FXML
-    private TableColumn<U5G3_Attendance, Boolean> ocCol;
+    private TableColumn ocCol;
     @javafx.fxml.FXML
-    private TableColumn<U5G3_Attendance, Boolean> ctCol;
+    private TableColumn ctCol;
     @javafx.fxml.FXML
-    private TableColumn<U5G3_Attendance, Boolean> fdrCol;
+    private TableColumn fdrCol;
     @javafx.fxml.FXML
-    private TableColumn<U5G3_Attendance, Boolean> ccrCol;
+    private TableColumn ccrCol;
     @javafx.fxml.FXML
     private Label noRecordsLabel;
     @javafx.fxml.FXML
-    private TableColumn<U5G3_Attendance, Boolean> ddCol;
+    private TableColumn ddCol;
 
 
 
@@ -50,18 +56,15 @@ public class U5G3_AttendanceViewController {
 
     @FXML
     public void loadAttendance() {
-        ArrayList<U5G3_Attendance> records = U5G3_Attendance.loadAllFromFile();
 
-        if (records.isEmpty()) {
-            noRecordsLabel.setText("No attendance records available.");
-            attendanceTV.setItems(FXCollections.emptyObservableList());
-        } else {
-            ObservableList<U5G3_Attendance> data = FXCollections.observableArrayList(records);
-            attendanceTV.setItems(data);
-        }
     }
 
 
-
-
+    @FXML
+    public void dashboardOA(ActionEvent actionEvent) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/org/example/drywashcleaningservicesimulator/OmarYeasinKhanFXML/StoreBranchManagerDashboard.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        Stage stage = (Stage) (((Node) actionEvent.getSource()).getScene().getWindow());
+        stage.setScene(scene);
+    }
 }

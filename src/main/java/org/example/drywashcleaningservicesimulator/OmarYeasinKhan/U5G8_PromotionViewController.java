@@ -10,22 +10,17 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class U5G5_DailyTargetsController
+public class U5G8_PromotionViewController
 {
     @javafx.fxml.FXML
-    private Label statusMessageLabel;
+    private Label currentDiscountLabel1;
     @javafx.fxml.FXML
-    private TextField revenueTargetTF;
+    private TextField newDiscountTF;
     @javafx.fxml.FXML
-    private TextField orderTargetTF;
+    private Label currentDiscountLabel;
 
     @javafx.fxml.FXML
     public void initialize() {
-    }
-
-    @javafx.fxml.FXML
-    public void saveTargetButtonOA(ActionEvent actionEvent) {
-
     }
 
     @javafx.fxml.FXML
@@ -34,5 +29,9 @@ public class U5G5_DailyTargetsController
         Scene scene = new Scene(fxmlLoader.load());
         Stage stage = (Stage) (((Node) actionEvent.getSource()).getScene().getWindow());
         stage.setScene(scene);
+    }
+
+    @javafx.fxml.FXML
+    public void saveButtonOA(ActionEvent actionEvent) {
     }
 }

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="539.0" prefWidth="704.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.drywashcleaningservicesimulator.OmarYeasinKhan.U5G8_PromotionViewController">
+   <children>
+      <Label fx:id="currentDiscountLabel" layoutX="200.0" layoutY="210.0" prefHeight="99.0" prefWidth="210.0" style="-fx-background-color: cyan;" text="Label" />
+      <Text layoutX="200.0" layoutY="195.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current Discount :" wrappingWidth="135.73675537109375" />
+      <Label fx:id="currentDiscountLabel1" layoutX="200.0" layoutY="325.0" prefHeight="54.0" prefWidth="210.0" style="-fx-background-color: cyan;" text="Status" />
+      <TextField fx:id="newDiscountTF" layoutX="51.0" layoutY="72.0" />
+      <Text layoutX="51.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="New Discount :" wrappingWidth="94.93670654296875" />
+      <Button layoutX="51.0" layoutY="119.0" mnemonicParsing="false" onAction="#saveButtonOA" text="Save" />
+      <Button layoutX="113.0" layoutY="119.0" mnemonicParsing="false" onAction="#dashboardOA" text="Dashboard" />
+   </children>
+</AnchorPane>

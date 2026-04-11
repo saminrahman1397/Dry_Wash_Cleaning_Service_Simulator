@@ -27,11 +27,11 @@ public class UC5_StoreBranchManager extends User implements Serializable {
 
      } */
     public ArrayList<U5G3_Attendance> viewAttendance(){
-        return U5G3_Attendance.loadAllFromFile();
+        return null;
 
     }
     public ArrayList<U5G4_ViewFeedback> viewFeedback(){
-        return U5G4_ViewFeedback.loadAllFromFile();
+        return null;
     }
 
     public void setDailyTargets(double dailyRevenueTarget, int dailyOrderTarget) {

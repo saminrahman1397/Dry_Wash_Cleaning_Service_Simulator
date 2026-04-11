@@ -22,7 +22,7 @@ public class loginViewController {
 
 
     public void initialize(){
-        userTypeComboBox.getItems().addAll("Customer","Front Desk Receptionist");
+        userTypeComboBox.getItems().addAll("Customer","Front Desk Receptionist", "Store Branch Manager", "Inventory Manager");
     }
 
     @javafx.fxml.FXML
@@ -39,6 +39,18 @@ public class loginViewController {
             }
             else if (userTypeComboBox.getValue().equals("Front Desk Receptionist")){
                 FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("SaminRahmanFXML/FrontDeskReceptionistView.fxml"));
+                Scene scene = new Scene(fxmlLoader.load());
+                Stage stage = (Stage) (((Node) actionEvent.getSource()).getScene().getWindow());
+                stage.setScene(scene);
+            }
+            else if (userTypeComboBox.getValue().equals("Store Branch Manager")){
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("OmarYeasinKhanFXML/StoreBranchManagerDashboard.fxml"));
+                Scene scene = new Scene(fxmlLoader.load());
+                Stage stage = (Stage) (((Node) actionEvent.getSource()).getScene().getWindow());
+                stage.setScene(scene);
+            }
+            else if (userTypeComboBox.getValue().equals("Inventory Manager")){
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("OmarYeasinKhanFXML/InventoryManagerDashboard.fxml"));
                 Scene scene = new Scene(fxmlLoader.load());
                 Stage stage = (Stage) (((Node) actionEvent.getSource()).getScene().getWindow());
                 stage.setScene(scene);

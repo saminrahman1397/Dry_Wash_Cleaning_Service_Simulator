@@ -5,27 +5,27 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class U5G5_DailyTargetsController
+public class U5G1_DailySummaryViewController
 {
     @javafx.fxml.FXML
-    private Label statusMessageLabel;
+    private Label inProgressOrdersLabel;
     @javafx.fxml.FXML
-    private TextField revenueTargetTF;
+    private Label totalRevenLabel;
     @javafx.fxml.FXML
-    private TextField orderTargetTF;
+    private Label totalOrdersLabel;
+    @javafx.fxml.FXML
+    private Label pendingOrdersLabel;
+    @javafx.fxml.FXML
+    private Label completedOrdersLabel;
+    @javafx.fxml.FXML
+    private Label cancelledOrdersLabel;
 
     @javafx.fxml.FXML
     public void initialize() {
-    }
-
-    @javafx.fxml.FXML
-    public void saveTargetButtonOA(ActionEvent actionEvent) {
-
     }
 
     @javafx.fxml.FXML
