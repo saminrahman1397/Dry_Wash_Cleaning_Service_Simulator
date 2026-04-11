@@ -23,7 +23,7 @@
       <TextField fx:id="quantityTextField" layoutX="384.0" layoutY="109.0" prefHeight="25.0" prefWidth="49.0" />
       <Label layoutX="324.0" layoutY="148.0" text="Pickup Time: " />
       <ComboBox fx:id="pickupTimeComboBox" layoutX="396.0" layoutY="144.0" prefHeight="25.0" prefWidth="89.0" />
-      <Button layoutX="47.0" layoutY="253.0" mnemonicParsing="false" onAction="#showPriceOnActionButton" text="Show Price" />
+      <Button layoutX="47.0" layoutY="272.0" mnemonicParsing="false" onAction="#showPriceOnActionButton" text="Show Price" />
       <Button layoutX="226.0" layoutY="316.0" mnemonicParsing="false" onAction="#confirmOrderOnActionButton" text="Confirm Order" />
       <Button layoutX="479.0" layoutY="342.0" mnemonicParsing="false" onAction="#dashboardOnActionButton" text="Dashboard" />
       <ComboBox fx:id="urgencyComboBox" layoutX="118.0" layoutY="144.0" prefHeight="25.0" prefWidth="89.0" />

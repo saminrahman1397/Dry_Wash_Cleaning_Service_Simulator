@@ -1,16 +1,17 @@
 package org.example.drywashcleaningservicesimulator.SaminRahman;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
-public class Order {
+public class Order implements Serializable {
     private String orderID;
     private String customerID;
     private String customerName;
     private String phoneNumber;
     private String address;
     private String serviceMethod;
-    private ArrayList<GarmentItem> garmentType;
+    private String garmentType;
     private LocalDate orderDate;
     private String orderStatus = "Processing";
     private double totalCost;
@@ -22,7 +23,7 @@ public class Order {
 
     public Order() {
         orderID = "TBA";
-        customerID = "TBA";
+        customerID = "0001";
         customerName = "TBA";
         phoneNumber = "TBA";
         address = "TBA";
@@ -35,10 +36,10 @@ public class Order {
         pickupTimeSlot = "TBA";
         assignedDriverID = "001";
         specialInstructions = "None";
-        urgency = "Regular";
+        urgency = "TBA";
     }
 
-    public Order(String orderID, String customerID, String customerName, String phoneNumber, String address, String serviceMethod, ArrayList<GarmentItem> garmentType, LocalDate orderDate, double totalCost, LocalDate pickupDate, String pickupTimeSlot, String specialInstructions, String urgency) {
+    public Order(String orderID, String customerID, String customerName, String phoneNumber, String address, String serviceMethod, String garmentType, LocalDate orderDate, double totalCost, LocalDate pickupDate, String pickupTimeSlot, String specialInstructions, String urgency) {
         this.orderID = orderID;
         this.customerID = customerID;
         this.customerName = customerName;
@@ -102,11 +103,11 @@ public class Order {
         this.serviceMethod = serviceMethod;
     }
 
-    public ArrayList<GarmentItem> getGarmentType() {
+    public String getGarmentType() {
         return garmentType;
     }
 
-    public void setGarmentType(ArrayList<GarmentItem> garmentType) {
+    public void setGarmentType(String garmentType) {
         this.garmentType = garmentType;
     }
 
