@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane fx:id="inventoryTV" prefHeight="400.0" prefWidth="801.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.drywashcleaningservicesimulator.OmarYeasinKhan.G1InventoryController"
+      <TableView fx:id="inventoryTV" layoutX="78.0" layoutY="89.0" prefHeight="200.0" prefWidth="638.0">
+        <columns>
+          <TableColumn fx:id="itemIDTC" prefWidth="75.0" text="ItemID" />
+          <TableColumn fx:id="nameTC" prefWidth="75.20001220703125" text="ItemName" />
+            <TableColumn fx:id="categoryTC" prefWidth="75.20001220703125" text="Category" />
+            <TableColumn fx:id="qtyTC" prefWidth="75.20001220703125" text="CurrentQty" />
+            <TableColumn fx:id="unitTC" prefWidth="75.20001220703125" text="unit" />
+            <TableColumn fx:id="unitePriceTC" prefWidth="75.20001220703125" text="Unit Price" />
+            <TableColumn fx:id="minLevelTC" prefWidth="75.20001220703125" text="Min Level" />
+            <TableColumn fx:id="maxLevelTC" prefWidth="106.39984130859375" text="Max Level" />
+        </columns>
+      </TableView>
+      <Label fx:id="noItemsLabel" layoutX="94.0" layoutY="316.0" prefHeight="18.0" prefWidth="108.0" text="No items" />
+      <Button layoutX="276.0" layoutY="313.0" mnemonicParsing="false" onAction="#loadStockOA" text="Load Stock" />
+      <Button layoutX="435.0" layoutY="313.0" mnemonicParsing="false" onAction="#dashboardOA" text="Dashboard" />
+   </children>
+</AnchorPane>

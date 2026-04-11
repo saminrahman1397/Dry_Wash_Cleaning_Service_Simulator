@@ -1,14 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="org.example.drywashcleaningservicesimulator.OmarYeasinKhan.InventoryManagerDashboardController"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.drywashcleaningservicesimulator.OmarYeasinKhan.InventoryManagerDashboardController">
+    <children>
+        <Label fx:id="roleLabel" layoutX="179.0" layoutY="27.0" prefHeight="18.0" prefWidth="258.0" style="-fx-background-color: cyan;" />
+        <Button layoutX="248.0" layoutY="65.0" mnemonicParsing="false" onAction="#inventoryLevelsButtonOA" prefHeight="26.0" prefWidth="120.0" text="Inventory Levels" />
+        <Button layoutX="248.0" layoutY="98.0" mnemonicParsing="false" onAction="#reorderOA" prefHeight="26.0" prefWidth="120.0" text="Reorder Alerts" />
+        <Button layoutX="248.0" layoutY="134.0" mnemonicParsing="false" onAction="#receptionOA" prefHeight="26.0" prefWidth="120.0" text="Receive Supplies" />
+        <Button layoutX="248.0" layoutY="166.0" mnemonicParsing="false" onAction="#stocklevelOA" prefHeight="26.0" prefWidth="120.0" text="Stock Level" />
+        <Button layoutX="248.0" layoutY="200.0" mnemonicParsing="false" onAction="#countOA" prefHeight="26.0" prefWidth="120.0" text="Physical Count" />
+        <Button layoutX="248.0" layoutY="236.0" mnemonicParsing="false" onAction="#createSupplierOA" prefHeight="26.0" prefWidth="154.0" text="Create Supplier Contact" />
+        <Button layoutX="248.0" layoutY="270.0" mnemonicParsing="false" onAction="#createReqOA" prefHeight="26.0" prefWidth="163.0" text="Create Purchase Request" />
+        <Button layoutX="248.0" layoutY="302.0" mnemonicParsing="false" onAction="#supplierInfoOA" text="Supplier Info" />
+        <Button layoutX="281.0" layoutY="340.0" mnemonicParsing="false" onAction="#logoutOA" text="Logout" />
+    </children>
 </AnchorPane>
