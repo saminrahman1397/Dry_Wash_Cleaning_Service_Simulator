@@ -35,7 +35,7 @@ public class technicianworkController
     public void updateSettingOnActionButton(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void reportDamageOnActionButton(ActionEvent actionEvent) {
     }
 
