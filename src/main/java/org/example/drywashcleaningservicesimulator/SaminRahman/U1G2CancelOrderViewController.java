@@ -66,7 +66,6 @@ public class U1G2CancelOrderViewController {
             } catch (IOException e) {
                 e.printStackTrace();
             }
-
         }
     }
 
