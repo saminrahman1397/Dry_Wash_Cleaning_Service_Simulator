@@ -72,5 +72,23 @@ public class U1G5TrackOrderStatusViewController {
 
     @javafx.fxml.FXML
     public void checkStatusOnActionButton(ActionEvent actionEvent) {
+        boolean found = false;
+        File file = new File("Data/orders.bin");
+        try(ObjectInputStream ois = new ObjectInputStream(new FileInputStream(file))){
+            while (true) {
+                try {
+                    Order obj = (Order) ois.readObject();
+                    if (obj.getOrderID().equals(orderIDTextField.getText())) {
+                        Alert a = new Alert(Alert.AlertType.INFORMATION);
+                        a.setContentText("Your order is " + obj.getOrderStatus());
+                        a.showAndWait();
+                    }
+                }catch(EOFException e){
+                    break;
+                }
+            }
+        }catch(Exception e){
+            e.printStackTrace();
+        }
     }
 }
