@@ -61,7 +61,12 @@ public class CustomerViewController {
     }
 
     @javafx.fxml.FXML
-    public void reportProblemOnActionButton(ActionEvent actionEvent) {
+    public void reportProblemOnActionButton(ActionEvent actionEvent) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/org/example/drywashcleaningservicesimulator/SaminRahmanFXML/U1G7ReportProblemView.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        Stage stage = (Stage) (((Node) actionEvent.getSource()).getScene().getWindow());
+        stage.setScene(scene);
+        stage.show();
     }
 
     @javafx.fxml.FXML
