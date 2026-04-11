@@ -9,7 +9,7 @@ module org.example.drywashcleaningservicesimulator {
     opens org.example.drywashcleaningservicesimulator.SaminRahman to javafx.fxml, javafx.base;
     opens org.example.drywashcleaningservicesimulator.OmarYeasinKhan to javafx.fxml, javafx.base;
     opens org.example.drywashcleaningservicesimulator.utilitySamin to javafx.fxml;
-    exports org.example.drywashcleaningservicesimulator.sheikhsafinmehedi;
+    exports org.example.drywashcleaningservicesimulator;
     exports org.example.drywashcleaningservicesimulator.SaminRahman;
     exports org.example.drywashcleaningservicesimulator.OmarYeasinKhan;
     opens org.example.drywashcleaningservicesimulator.sheikhsafinmehedi to javafx.fxml;
