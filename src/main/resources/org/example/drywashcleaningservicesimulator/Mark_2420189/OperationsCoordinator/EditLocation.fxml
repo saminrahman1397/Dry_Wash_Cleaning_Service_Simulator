@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.drywashcleaningservicesimulator.Mark_2420189.OperationsCoordinator.EditLocationController">
+    <children>
+        <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#backButtonOA" prefHeight="30.0" prefWidth="100.0" text="← Dashboard" textAlignment="CENTER">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font></Button>
+        <Label alignment="CENTER" layoutX="157.0" layoutY="32.0" prefHeight="46.0" prefWidth="286.0" text="Edit Cleaning Location">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+        <Label fx:id="messageLabel" alignment="CENTER_RIGHT" layoutX="354.0" layoutY="2.0" prefHeight="18.0" prefWidth="241.0" />
+
+        <TextField fx:id="locationNameTF" layoutX="151.0" layoutY="88.0" prefHeight="26.0" prefWidth="94.0" />
+
+        <Label layoutX="31.0" layoutY="92.0" text="Location Name:" />
+      <Button layoutX="299.0" layoutY="84.0" mnemonicParsing="false" onAction="#loadButtonOA" prefHeight="33.0" prefWidth="74.0" text="Load">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <TableView fx:id="cleaningLocationTV" layoutX="16.0" layoutY="127.0" prefHeight="202.0" prefWidth="570.0">
+        <columns>
+          <TableColumn fx:id="idTC" maxWidth="1064.000244140625" minWidth="30.0" prefWidth="106.4000244140625" text="Location ID" />
+          <TableColumn fx:id="nameTC" maxWidth="1536.0003662109375" minWidth="30.0" prefWidth="153.60003662109375" text="Location Name" />
+            <TableColumn fx:id="addressTC" maxWidth="1496.0003662109375" minWidth="30.0" prefWidth="149.60003662109375" text="Address" />
+            <TableColumn fx:id="numberTC" maxWidth="1663.9996337890625" minWidth="30.0" prefWidth="166.39996337890625" text="Number of Staff Assigned" />
+        </columns>
+      </TableView>
+      <Button layoutX="246.0" layoutY="339.0" mnemonicParsing="false" onAction="#editLocationButtonOA" prefHeight="46.0" prefWidth="110.0" text="Edit Location">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+    </children>
+</AnchorPane>

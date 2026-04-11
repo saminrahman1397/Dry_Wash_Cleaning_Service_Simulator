@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="500.0" prefWidth="550.0" style="-fx-background-color: 000;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.drywashcleaningservicesimulator.Mark_2420189.Customer_Care_Representative.AddServiceRequest_Controller">
+    <children>
+        <Text layoutX="140.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add New Service Request" wrappingWidth="280.0">
+            <font>
+                <Font size="22.0" />
+            </font>
+        </Text>
+        <Label layoutX="60.0" layoutY="90.0" text="Customer ID:" textFill="#0d0d0d" />
+        <TextField fx:id="customerIDField" layoutX="200.0" layoutY="85.0" prefHeight="30.0" prefWidth="280.0" />
+        <Label layoutX="60.0" layoutY="140.0" text="Customer Name:" textFill="#1d1d1d" />
+        <TextField fx:id="customerNameField" layoutX="200.0" layoutY="135.0" prefHeight="30.0" prefWidth="280.0" />
+        <Label layoutX="60.0" layoutY="190.0" text="Location:" textFill="#1b1a1a" />
+        <TextField fx:id="locationField" layoutX="200.0" layoutY="185.0" prefHeight="30.0" prefWidth="280.0" />
+        <Label layoutX="60.0" layoutY="240.0" text="Preferred Date " textFill="#191818" />
+        <Label layoutX="60.0" layoutY="290.0" text="Service Type:" textFill="#1f1f1f" />
+        <Button layoutX="210.0" layoutY="360.0" mnemonicParsing="false" onAction="#addONA" prefHeight="40.0" prefWidth="140.0" text="Add Service Request" />
+      <DatePicker fx:id="date_picker" layoutX="200.0" layoutY="237.0" />
+      <ComboBox fx:id="serviceCombo" layoutX="200.0" layoutY="286.0" prefWidth="150.0" />
+    </children>
+</AnchorPane>

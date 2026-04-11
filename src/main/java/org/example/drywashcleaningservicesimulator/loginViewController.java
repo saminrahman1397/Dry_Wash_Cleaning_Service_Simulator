@@ -22,7 +22,7 @@ public class loginViewController {
 
 
     public void initialize(){
-        userTypeComboBox.getItems().addAll("Customer","Front Desk Receptionist");
+        userTypeComboBox.getItems().addAll("Customer","Front Desk Receptionist", "Operations Coordinator", "Customer Care Representative");
     }
 
     @javafx.fxml.FXML
@@ -43,6 +43,21 @@ public class loginViewController {
                 Stage stage = (Stage) (((Node) actionEvent.getSource()).getScene().getWindow());
                 stage.setScene(scene);
             }
+            else if (userTypeComboBox.getValue().equals("Operations Coordinator")){
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/org/example/drywashcleaningservicesimulator/Mark_2420189/Customer_Care_Representative/customer_representative_dashboard.fxml"));
+                Scene scene = new Scene(fxmlLoader.load());
+                Stage stage = (Stage) (((Node) actionEvent.getSource()).getScene().getWindow());
+                stage.setScene(scene);
+            }
+            else if (userTypeComboBox.getValue().equals("Operations Coordinator")){
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/org/example/drywashcleaningservicesimulator/Mark_2420189/OperationsCoordinator/operationsCoordinatorDashboard.fxml"));
+                Scene scene = new Scene(fxmlLoader.load());
+                Stage stage = (Stage) (((Node) actionEvent.getSource()).getScene().getWindow());
+                stage.setScene(scene);
+            }
+
+
+
         }
         else{
             Alert a = new Alert(Alert.AlertType.ERROR);

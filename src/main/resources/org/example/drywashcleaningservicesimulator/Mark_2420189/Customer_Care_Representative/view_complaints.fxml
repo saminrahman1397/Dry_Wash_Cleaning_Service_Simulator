@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="500.0" style="-fx-background-color: 000;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.drywashcleaningservicesimulator.Mark_2420189.Customer_Care_Representative.viewAllComplaint_Controller">
+    <children>
+        <Text layoutX="120.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="View All Complaint" textAlignment="CENTER" wrappingWidth="260.0">
+            <font>
+                <Font size="22.0" />
+            </font>
+        </Text>
+      <TableView fx:id="tableView" layoutX="55.0" layoutY="100.0" prefHeight="200.0" prefWidth="389.0">
+        <columns>
+          <TableColumn fx:id="IdCol" prefWidth="75.0" text="ComplaintID" />
+          <TableColumn fx:id="descriptionCol" prefWidth="212.6666259765625" text="Description" />
+            <TableColumn fx:id="dateCol" prefWidth="100.0" text="Complaint Date" />
+        </columns>
+      </TableView>
+    </children>
+</AnchorPane>
