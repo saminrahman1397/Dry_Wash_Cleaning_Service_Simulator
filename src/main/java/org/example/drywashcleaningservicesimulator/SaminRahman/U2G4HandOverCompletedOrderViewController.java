@@ -56,7 +56,6 @@ public class U2G4HandOverCompletedOrderViewController {
             while (true) {
                 try {
                     Order obj = (Order) ois.readObject();
-                    // Filtering for unpaid orders
                     if (!obj.getOrderStatus().equals("Cancelled")) {
                         handOverOrderTableView.getItems().add(obj);
                     }ordersList.add(obj);

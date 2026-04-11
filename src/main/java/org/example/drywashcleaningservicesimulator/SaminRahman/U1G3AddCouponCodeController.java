@@ -139,7 +139,6 @@ public class U1G3AddCouponCodeController {
                 while (true) {
                     try {
                         Order obj = (Order) ois.readObject();
-                        // Filtering for unpaid orders
                         if (obj.getPaymentStatus().equals("unpaid")) {
                             couponTableView.getItems().add(obj);
                         }

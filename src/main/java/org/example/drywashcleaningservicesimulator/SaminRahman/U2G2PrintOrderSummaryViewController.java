@@ -49,7 +49,6 @@ public class U2G2PrintOrderSummaryViewController {
             while (true) {
                 try {
                     Order obj = (Order) ois.readObject();
-                    // Filtering for unpaid orders
                     if (!obj.getOrderStatus().equals("Cancelled")) {
                         orderSummaryTableView.getItems().add(obj);
                     }

@@ -50,7 +50,11 @@ public class FrontDeskReceptionistViewController {
     }
 
     @javafx.fxml.FXML
-    public void issueRefundOnActionButton(ActionEvent actionEvent) {
+    public void issueRefundOnActionButton(ActionEvent actionEvent) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/org/example/drywashcleaningservicesimulator/SaminRahmanFXML/U2G5IssueRefundView.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        Stage stage = (Stage) (((Node) actionEvent.getSource()).getScene().getWindow());
+        stage.setScene(scene);
     }
 
     @javafx.fxml.FXML
