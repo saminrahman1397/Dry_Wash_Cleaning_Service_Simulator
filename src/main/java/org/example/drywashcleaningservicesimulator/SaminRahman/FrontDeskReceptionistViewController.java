@@ -30,11 +30,19 @@ public class FrontDeskReceptionistViewController {
     }
 
     @javafx.fxml.FXML
-    public void createNewOrderOnActionButton(ActionEvent actionEvent) {
+    public void createNewOrderOnActionButton(ActionEvent actionEvent) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/org/example/drywashcleaningservicesimulator/SaminRahmanFXML/U2G1RegisterNewOrderView.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        Stage stage = (Stage) (((Node) actionEvent.getSource()).getScene().getWindow());
+        stage.setScene(scene);
     }
 
     @javafx.fxml.FXML
-    public void processPaymentOnActionButton(ActionEvent actionEvent) {
+    public void processPaymentOnActionButton(ActionEvent actionEvent) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/org/example/drywashcleaningservicesimulator/SaminRahmanFXML/U2G3ProcessPaymentAtCounter.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        Stage stage = (Stage) (((Node) actionEvent.getSource()).getScene().getWindow());
+        stage.setScene(scene);
     }
 
     @javafx.fxml.FXML
@@ -42,6 +50,10 @@ public class FrontDeskReceptionistViewController {
     }
 
     @javafx.fxml.FXML
-    public void printOrderSummaryOnActionButton(ActionEvent actionEvent) {
+    public void printOrderSummaryOnActionButton(ActionEvent actionEvent) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/org/example/drywashcleaningservicesimulator/SaminRahmanFXML/U2G2PrintOrderSummaryView.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        Stage stage = (Stage) (((Node) actionEvent.getSource()).getScene().getWindow());
+        stage.setScene(scene);
     }
 }

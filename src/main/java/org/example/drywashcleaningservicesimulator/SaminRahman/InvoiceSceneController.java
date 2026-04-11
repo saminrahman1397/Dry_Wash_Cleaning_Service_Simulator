@@ -1,0 +1,38 @@
+package org.example.drywashcleaningservicesimulator.SaminRahman;
+
+import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Scene;
+import javafx.scene.control.Label;
+import javafx.stage.Stage;
+
+import java.io.IOException;
+
+public class InvoiceSceneController {
+
+
+    @javafx.fxml.FXML
+    private Label invoiceLabel;
+
+    @javafx.fxml.FXML
+    public void backButtonOnAction(ActionEvent actionEvent) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/org/example/drywashcleaningservicesimulator/SaminRahmanFXML/U1G8ViewInVoiceView.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        Stage stage = (Stage) (((Node) actionEvent.getSource()).getScene().getWindow());
+        stage.setScene(scene);
+        stage.show();
+    }
+    public void RecieveOrderObjectAndGenerateInvoice(Order order){
+        String invoiceText = "--- DRY WASH INVOICE ---\n\n" +
+                "Order ID: " + order.getOrderID() + "\n" +
+                "Customer: " + order.getCustomerName() + "\n" +
+                "Garment: " + order.getGarmentType() + "\n" +
+                "Service: " + order.getServiceMethod() + "\n" +
+                "--------------------------\n" +
+                "Total Cost: " + order.getTotalCost() + " BDT\n" +
+                "Status: " + order.getPaymentStatus() + "\n\n" +
+                "Thank you!";
+        invoiceLabel.setText(invoiceText);
+    }
+}
