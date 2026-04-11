@@ -1,22 +1,24 @@
 package org.example.drywashcleaningservicesimulator.OmarYeasinKhan;
+import org.example.drywashcleaningservicesimulator.User;
+
 import java.io.*;
 import java.time.LocalDate;
 import java.util.*;
 
 
-public class UC6_StoreBranchManager implements Serializable {
+public class UC6_StoreBranchManager extends User {
 
-    private String managerID;
-    private String managerName;
-
-    public UC6_StoreBranchManager (String managerID, String managerName){
-        this.managerID = managerID;
-        this.managerName = managerName;
+    public UC6_StoreBranchManager(String userID, String userName, String email, String password, String role, String phoneNumber, String address) {
+        super(userID, userName, email, password, role);
 
 
 
 
         }
+    public void localDashBoard(){
+
+    }
+
 
         /*public reviewDailyOperationsSummary(){
 

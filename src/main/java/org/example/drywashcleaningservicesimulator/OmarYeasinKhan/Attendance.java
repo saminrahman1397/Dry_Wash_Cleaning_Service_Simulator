@@ -72,8 +72,8 @@ public class Attendance implements Serializable{
 
     public static ArrayList<Attendance> loadAllFromFile(){
         try{
-
-            FileInputStream fis =  new FileInputStream("OmarsFiles/attendance.bin");
+            File attendanceFile = new File("OmarsFiles/attendance.bin");
+            FileInputStream fis =  new FileInputStream(attendanceFile);
             ObjectInputStream ois = new ObjectInputStream(fis);
 
             ArrayList<Attendance> list = (ArrayList<Attendance>) ois.readObject();
