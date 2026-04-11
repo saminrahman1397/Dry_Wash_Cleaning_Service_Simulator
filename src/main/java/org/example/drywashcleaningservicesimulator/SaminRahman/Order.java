@@ -20,6 +20,8 @@ public class Order implements Serializable {
     private String assignedDriverID = "001";
     private String specialInstructions;
     private String urgency;
+    private String paymentStatus = "unpaid";
+    private double discountAmount;
 
     public Order() {
         orderID = "TBA";
@@ -37,6 +39,7 @@ public class Order implements Serializable {
         assignedDriverID = "001";
         specialInstructions = "None";
         urgency = "TBA";
+        paymentStatus = "unpaid";
     }
 
     public Order(String orderID, String customerID, String customerName, String phoneNumber, String address, String serviceMethod, String garmentType, LocalDate orderDate, double totalCost, LocalDate pickupDate, String pickupTimeSlot, String specialInstructions, String urgency) {
@@ -53,6 +56,14 @@ public class Order implements Serializable {
         this.pickupTimeSlot = pickupTimeSlot;
         this.specialInstructions = specialInstructions;
         this.urgency = urgency;
+    }
+
+    public String getPaymentStatus() {
+        return paymentStatus;
+    }
+
+    public void setPaymentStatus(String paymentStatus) {
+        this.paymentStatus = paymentStatus;
     }
 
     public String getOrderID() {
@@ -170,22 +181,5 @@ public class Order implements Serializable {
     public void setUrgency(String urgency) {
         this.urgency = urgency;
     }
-
-    public void setAssignedDriverID(String assignedDriverID) {
-        this.assignedDriverID = assignedDriverID;
-    }
-    public String generateOrderID(){
-        return "tba";
-    }
-    public double calculateTotalCost(){
-        return 0;
-    }
-    public boolean isEligibleForCancellation(LocalDate pickupDate){
-        return true;
-    }
-    public boolean isEligibleForRefund(){
-        return true;
-    }
-
 }
 
